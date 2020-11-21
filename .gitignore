@@ -143,3 +143,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+#resources folder
+/resources

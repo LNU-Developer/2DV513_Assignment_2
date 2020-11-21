@@ -9,15 +9,16 @@ module.exports = class Database {
    */
   constructor (config) {
     this.config = config
+    this.connection = undefined
   }
 
   /** Method to connect to database.
    *
    */
   connect () {
-    const connection = mysql.createConnection(this.config)
+    this.connection = mysql.createConnection(this.config)
 
-    connection.connect(function (err) {
+    this.connection.connect(function (err) {
       if (err) throw err
       console.log('Connected!')
     })
